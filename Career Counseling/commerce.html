@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+        .contain{
+        width: 100%;
+        height: 100vh;
+        margin-left: 2%;
+        
+        
+        
+        display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        body{
+        background:url("background.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+        }
+        hr{
+        margin-left: 35%;
+        margin-right: 35%;
+        }
+        .head{
+        font-family: Century Gothic;
+        font-size: 40px;
+        text-align: center;
+        color: aliceblue;
+        }
+
+        header{   
+        font-family: Century Gothic;         
+        height: 10vh;
+        background-size: cover;
+        background-position: top;
+        }
+        .main > ul{
+        float: right;
+        list-style-type: none;
+        margin-top: 3%; 
+        margin-right: 3%;
+        }
+        .main > ul li{
+        display: inline-block;
+        
+        }
+        .main > ul li a{
+        text-decoration: none;
+        color: white;
+        padding: 10px 20px;
+        border: 1px solid transparent;
+        transition: 0.6s ease;
+        border: 1px solid white ;
+        border-radius: 20px;
+        }
+        .main > ul li a:hover{
+        background-color: white;
+        color: black;
+        }
+
+        .main > ul li.on a{
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: 1px solid white ;
+        
+        }
+        .fa{
+        margin-left: 8px;
+        }
+
+
+
+
+
+        .card {
+        display: grid;
+        grid-template-columns: 300px;
+        grid-template-rows: 210px 210px 80px;
+        grid-template-areas: "image" "text" "stats";
+
+        border-radius: 18px;
+        background: white;
+        box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+        font-family: roboto;
+        text-align: center;
+        
+
+        transition: 0.5s ease;
+        cursor: pointer;
+        margin:30px;
+        }
+        .card-image {
+        grid-area: image;
+        background: url("com/1.jpg");
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        background-size: cover;
+        }
+
+        .card-text {
+        grid-area: text;
+        margin: 15px;
+        }
+        .card-text .date {
+        color: rgb(255, 7, 110);
+        font-size:13px;
+        }
+        .card-text p {
+        color: grey;
+        font-size:15px;
+        font-weight: 300;
+        }
+        .card-text h2 {
+        margin-top:0px;
+        font-size:20px;
+        }
+        .card-stats {
+        grid-area: stats; 
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        background: rgb(255, 7, 110);
+        }
+        .card-stats .stat {
+        padding:10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+        }
+        .card-stats .border {
+        border-left: 1px solid rgb(172, 26, 87);
+        
+        }
+        .card-stats .value{
+        font-size:22px;
+        font-weight: 500;
+        }
+        .card-stats .value sup{
+        font-size:12px;
+        }
+        .card-stats .type{
+        font-size:11px;
+        font-weight: 300;
+        text-transform: uppercase;
+        }
+        .card:hover {
+        transform: scale(1.15);
+        box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+        }
+
+        /*card2*/
+        .card-image.card2 {
+        background: url("com/2.jpg");
+        background-size: cover;
+        }
+        .card-text.card2 .date {
+        color: rgb(255, 77, 7);
+        }
+        .card-stats.card2 .border {
+        border-left: 1px solid rgb(185, 67, 20);
+        
+        }
+        .card-stats.card2 {
+        background: rgb(255, 77, 7);
+        }
+        /*card3*/
+        .card-image.card3 {
+        background: url("com/3.jpg");
+        background-size: cover;
+        }
+        .card-text.card3 .date {
+        color: rgb(0, 189, 63);
+        }
+        .card-stats.card3 .border {
+        border-left: 1px solid rgb(14, 122, 50);
+        
+        }
+        .card-stats.card3 {
+        background: rgb(0, 189, 63);
+        }
+        /*card4*/
+        .card-image.card4 {
+        background: url("com/4.jpg");
+        background-size: cover;
+        }
+        .card-text.card4 .date {
+        color: rgb(0, 98, 189);
+        }
+        .card-stats.card4 .border {
+        border-left: 1px solid rgb(30, 14, 122);
+        
+        }
+        .card-stats.card4 {
+        background: rgb(0, 98, 189);
+        }
+        .card-image.card5 {
+        background: url("com/5.jpg");
+        background-size: cover;
+        }
+        .card-image.card6 {
+        background: url("com/6.jpg");
+        background-size: cover;
+        }
+        .card-image.card7 {
+        background: url("com/7.jpg");
+        background-size: cover;
+        }
+        .card-image.card8 {
+        background: url("com/8.jpg");
+        background-size: cover;
+        }
+        .card-image.card9 {
+        background: url("com/9.jpg");
+        background-size: cover;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+      <div class="main">
+              <ul>
+                      <li><a href="slide.html">Home<i class="fa fa-home"></i></a></li>
+              </ul>
+    </header>
+    <section>
+      <h1 class="head">COMMERCE (FYJC)</h1><hr><br><br>
+    </section>
+<div class="contain">
+        <div class="card">
+          <div class="card-image"></div>
+          <div class="card-text">
+            <span class="date">Cutoff (open): 93%</span>
+            <h2>Jai Hind College, Basantsing Institute of Science And J.T.Lalvani College....</h2>
+            <p>
+              <strong>  Area:</strong> Churchgate <br>
+              <strong>Contact:</strong>022-22040256<br>
+              <strong>Address:</strong> A Rd, Churchgate, Mumbai, Maharashtra 400020</p>
+          </div>
+          <div class="card-stats">
+            <div class="stat">
+              <div class="value">1</div>
+              <div class="type">Rank</div>
+            </div>
+            <div class="stat border">
+              <div class="value">8.2/10</div>
+              <div class="type">Rating</div>
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image card2"></div>
+          <div class="card-text card2">
+            <span class="date">Cutoff (open): 91.69%</span>
+            <h2>R. A. Podar College Of Commerce And Economics</h2>
+            <p><strong>  Area:</strong>Matunga <br>
+              <strong>Contact:</strong>022-24142960<br>
+              <strong>Address:</strong> L.N. Road, Matunga, Mumbai, Maharashtra 400019</p>
+          </div>
+          <div class="card-stats card2">
+            <div class="stat">
+              <div class="value">2</div>
+              <div class="type">Rank</div>
+            </div>
+            <div class="stat border">
+              <div class="value">7.7/10</div>
+              <div class="type">Rating</div>
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-image card3"></div>
+            <div class="card-text card3">
+              <span class="date">Cutoff (open): 90%</span>
+              <h2>H. R. College Of Commerce And Economics</h2>
+              <p><strong>  Area:</strong> Churchgate <br>
+                <strong>Contact:</strong>022-22876115<br>
+                <strong>Address:</strong> Vidyasagar Principal K.M. Kundnani Chowk, 123, Dinshaw Vacha Rd, Churchgate, Mumbai, Maharashtra 400020</p>
+            </div>
+            <div class="card-stats card3">
+              <div class="stat">
+                <div class="value">3</div>
+                <div class="type">Rank</div>
+              </div>
+              <div class="stat border">
+                <div class="value">7.8/10</div>
+                <div class="type">Rating</div>
+              </div>
+             
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-image card4"></div>
+            <div class="card-text card4">
+              <span class="date">Cutoff (open): 89.69%</span>
+              <h2>Elphinstone College</h2>
+              <p><strong>  Area:</strong>Vile Parle(West) <br>
+                <strong>Contact:</strong>  022-42338000<br>
+                <strong>Address:</strong>Irla, N. R. G Marg, Opposite Cooper Hospital, Vile Parle, Mumbai, Maharashtra 400056</p>
+            </div>
+            <div class="card-stats card4">
+              <div class="stat">
+                <div class="value">4</div>
+                <div class="type">Rank</div>
+              </div>
+              <div class="stat border">
+                <div class="value">7.9/10</div>
+                <div class="type">Rating</div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image card5"></div>
+            <div class="card-text">
+              <span class="date">Cutoff (open): 87.85%</span>
+              <h2>Padmashree Bhausaheb Vartak College</h2>
+              <p>
+                <strong>  Area:</strong>Virar <br>
+                <strong>Contact:</strong> 090499 44194 <br>
+                <strong>Address:</strong>Opp.Jivadani, Panch Payari Marg, Chandansar Rd, Virar, Maharashtra 401305</p>
+            </div>
+            <div class="card-stats">
+              <div class="stat">
+                <div class="value">5</div>
+                <div class="type">Rank</div>
+              </div>
+              <div class="stat border">
+                <div class="value">7.7/10</div>
+                <div class="type">Rating</div>
+              </div>
+              
+            </div>
+          </div>
+  
+          <div class="card">
+            <div class="card-image card6"></div>
+            <div class="card-text card2">
+              <span class="date">Cutoff (open): 86.31%</span>
+              <h2>Kelkar Education Trusts Vinayak Ganesh Vaze...</h2>
+              <p><strong>  Area:</strong> Mulund(East) <br>
+                <strong>Contact:</strong>  022-21631423 <br>
+                <strong>Address:</strong> Mithaghar Rd, Jai Ram Krishna Society, LIC Housing Colony, Mulund East, Mumbai, Maharashtra 400081</p>
+            </div>
+            <div class="card-stats card2">
+              <div class="stat">
+                <div class="value">6</div>
+                <div class="type">Rank</div>
+              </div>
+              <div class="stat border">
+                <div class="value">8.2/10</div>
+                <div class="type">Rating</div>
+              </div>
+              
+            </div>
+          </div>
+          
+          <div class="card">
+              <div class="card-image card7"></div>
+              <div class="card-text card3">
+                <span class="date">Cutoff (open): 84.31%</span>
+                <h2>Mahatma Education Society Pillai College Of...</h2>
+                <p><strong>  Area:</strong>New Panvel <br>
+                  <strong>Contact:</strong> 022-25224856 <br>
+                  <strong>Address:</strong> Opposite Fire Brigade Chembur Naka, Mumbai, Maharashtra 400071</p>
+              </div>
+              <div class="card-stats card3">
+                <div class="stat">
+                  <div class="value">7</div>
+                  <div class="type">Rank</div>
+                </div>
+                <div class="stat border">
+                  <div class="value">7.2/10</div>
+                  <div class="type">Rating</div>
+                </div>
+               
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="card-image card8"></div>
+              <div class="card-text card4">
+                <span class="date">Cutoff (open): 84.15%</span>
+                <h2>C.H.M. College</h2>
+                <p><strong>  Area:</strong>Ulhasnagar<br>
+                  <strong>Contact:</strong> 02512734940 <br>
+                  <strong>Address:</strong>Railway Station Road, Opp. Ulhasnagar Railway Station,Thane District, Ulhasnagar, Maharashtra 421003</p>
+              </div>
+              <div class="card-stats card4">
+                <div class="stat">
+                  <div class="value">8</div>
+                  <div class="type">Rank</div>
+                </div>
+                <div class="stat border">
+                  <div class="value">7.3/10</div>
+                  <div class="type">Rating</div>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-image card9"></div>
+              <div class="card-text">
+                <span class="date">Cutoff (open): 84%</span>
+                <h2>Mithibai College Of Arts, Chauhan Institute Of...</h2>
+                <p>
+                  <strong>  Area:</strong> Vile Parle(West)br>
+                  <strong>Contact:</strong>022-42339000<br>
+                  <strong>Address:</strong> Bhaktivedanta Swami Marg, Gulmohar Road, Suvarna Nagar, Vile Parle (W), Mumbai, Maharashtra 400056</p>
+              </div>
+              <div class="card-stats">
+                <div class="stat">
+                  <div class="value">9</div>
+                  <div class="type">Rank</div>
+                </div>
+                <div class="stat border">
+                  <div class="value">7.6/10</div>
+                  <div class="type">Rating</div>
+                </div>
+                
+              </div>
+            </div>
+          </div> 
+
+          
+  </body>
+</html>
